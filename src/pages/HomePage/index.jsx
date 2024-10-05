@@ -10,7 +10,12 @@ export const HomePage = () => {
   const [productList, setProductList] = useState([]);
   const [cartList, setCartList] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [favoriteBurguer, setFavoriteBurguer] = useState([]);
+
+ const localFavoriteburguer = localStorage.getItem("@MYFAVORITEBURGUER");
+
+  const [favoriteBurguer, setFavoriteBurguer] = useState(
+    localFavoriteburguer ? JSON.parse(localFavoriteburguer) : []
+    );
 
   useEffect(() => {
     const getBurgers = async () => {
@@ -28,6 +33,9 @@ export const HomePage = () => {
     getBurgers();
   }, []);
  
+  useEffect(() => {
+    localStorage.setItem("@MYFAVORITEBURGUER", JSON.stringify (favoriteBurguer));
+  },[favoriteBurguer])
 
   const addBurguer = (list) => {
     if (!favoriteBurguer.some((favoriteList) => favoriteList.id === list.id)) {
