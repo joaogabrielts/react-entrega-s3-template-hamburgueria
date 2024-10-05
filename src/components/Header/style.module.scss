@@ -1,0 +1,45 @@
+@import url("/src/styles/globalStyles.css");
+
+.header {
+  background-color:var(--grey-0); 
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color:var(--grey-0); 
+    button{
+        border: none;
+        color:  rgba(189, 189, 189, 1);
+        background-color:var(--grey-0); 
+        
+        span{
+            background-color: var(--color-primary);
+            position: absolute;
+            right: 0px;
+            width: 12px;
+            padding: 3px;
+            height: 16px;
+            bottom: 16px;
+            border-radius: 7px;
+            font-weight: 900;
+            font-size: 12px;
+            color: white;
+        }
+    }
+
+    form{
+        display: none;
+    }
+  }
+}
+@media (max-width:768px) {
+  .header{
+    padding: 30px 20px;
+  }
+}

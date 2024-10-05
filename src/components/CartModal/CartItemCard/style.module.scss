@@ -1,0 +1,50 @@
+.li {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  font-family: var(--font-primary);
+  justify-content: space-between;
+
+
+
+  div {
+    img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 20px;
+
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    color: rgba(189, 189, 189, 1);
+    background: white;
+  }
+
+  
+  .div-price {
+    margin: 0 auto; 
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    h3{
+        margin: 0px;
+        padding: 0px;
+    }
+    p{
+        padding: 0px;
+        margin: 0px;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+    
+  }
+}
+

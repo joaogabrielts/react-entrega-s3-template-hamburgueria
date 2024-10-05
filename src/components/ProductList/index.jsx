@@ -1,10 +1,12 @@
 import { ProductCard } from "./ProductCard";
+import style from "./style.module.scss"
 
-export const ProductList = ({ productList }) => {
+export const ProductList = ({ productList,setIsOpen ,addBurguer,isOpen}) => {
+  
    return (
-      <ul>
+      <ul className={style.ul}>
          {productList.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product}  setIsOpen={setIsOpen} addBurguer={addBurguer} isOpen={isOpen}/>
          ))}
       </ul>
    );

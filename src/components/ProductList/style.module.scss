@@ -1,0 +1,28 @@
+@import url("/src/styles/globalStyles.css");
+
+
+.ul {  
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 50px;
+  justify-content: center;
+}
+@media (max-width:768px) {
+  .ul{
+  
+    display: flex;               
+    overflow-x: auto;            
+     scroll-snap-type: x mandatory; 
+    gap: 20px;                 
+     padding: 20px;
+     justify-content: normal;
+     flex-wrap: nowrap;
+     align-items: flex-end;
+    
+  }
+}
+
+
+

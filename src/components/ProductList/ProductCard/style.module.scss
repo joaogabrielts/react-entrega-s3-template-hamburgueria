@@ -1,0 +1,116 @@
+@import url("/src/styles/globalStyles.css");
+
+.modal-disable {
+  list-style: none;
+  font-family: var(--font-primary);
+  display: flex;
+  padding-bottom: 20px;
+  width: 280px;
+  flex-direction: column;
+  border-radius: 5px;
+
+  &:hover {
+    border: 2px solid var(--color-primary);
+    button {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &:focus {
+    border: 2px solid var(--color-primary);
+  }
+
+  img {
+    width: 160px;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 700;
+    }
+    span {
+      color: var(--grey-300);
+      font-weight: 400px;
+      font-size: 13px;
+    }
+    .span-value {
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+    button {
+      width: 110px;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      background-color: rgba(189, 189, 189, 1);
+      border-radius: 10px;
+      color: white;
+      font-weight: 600px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .modal-disable {
+    .div-img {
+      width: 17rem;
+    }
+  }
+}
+
+.modal-active {
+  list-style: none;
+  font-family: var(--font-primary);
+  display: flex;
+  padding-bottom: 20px;
+  width: 280px;
+  flex-direction: column;
+  border: 2px solid var(--grey-100);
+  .div-img {
+    background-color: var(--grey-0);
+  }
+  img {
+    width: 160px;
+    margin: auto;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 700;
+    }
+    span {
+      color: var(--grey-300);
+      font-weight: 400px;
+      font-size: 13px;
+    }
+    .span-value {
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+    button {
+      width: 110px;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      background-color: rgba(189, 189, 189, 1);
+      border-radius: 10px;
+      color: white;
+      font-weight: 600px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+.div-character {
+  padding-left: 20px;
+}
