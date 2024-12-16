@@ -52,12 +52,20 @@ export const HomePage = () => {
     );
     setFavoriteBurguer(newFavoriteBurguer);
   };
- 
+
+  const excluirTodosOsItens = () => {
+    setFavoriteBurguer([]); 
+    localStorage.removeItem("@MYFAVORITEBURGUER"); 
+    toast.success("Todos os itens foram removidos do carrinho!");
+    
+    
+  };
  
   
   return (
     <>
         <Toaster /> {}
+        
       <Header favoriteBurguer={favoriteBurguer} setIsOpen={setIsOpen} />
       <main>
         {loading ? (
@@ -65,7 +73,7 @@ export const HomePage = () => {
         ) : (
           <section>
            
-             
+      
             <ProductList
               productList={productList}
               setIsOpen={setIsOpen}
@@ -77,6 +85,7 @@ export const HomePage = () => {
                 setIsOpen={setIsOpen}
                 removeBurguer={removeBurguer}
                 favoriteBurguer={favoriteBurguer}
+                excluirTodosOsItens={excluirTodosOsItens}
               />
             )}
           </section>

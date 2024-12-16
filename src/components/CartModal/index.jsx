@@ -3,7 +3,7 @@ import { CartItemCard } from "./CartItemCard";
 import { useKeydowm } from "../../hooks/useKeydowm";
 import style from "./style.module.scss";
 
-export const CartModal = ({ setIsOpen, favoriteBurguer,removeBurguer,
+export const CartModal = ({ setIsOpen, favoriteBurguer,removeBurguer,excluirTodosOsItens
 }) => {
  
   const total = favoriteBurguer.reduce((prevValue, produce) => {
@@ -50,7 +50,7 @@ export const CartModal = ({ setIsOpen, favoriteBurguer,removeBurguer,
               })}
             </span>
           </div>
-          <button>Remover todos</button>
+          <button onClick={() => {setIsOpen(false) , excluirTodosOsItens()}}>Remover todos</button>
         </div>
       </div>
     </div>
